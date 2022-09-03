@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class reverseNumber
+{
+private:
+    int num;
+public:
+    void setnum(int n)
+    {
+        num=n;
+    }
+    int getreversed()
+    {
+        int rev,i;
+        while(num>1)
+        {
+        i=num%10;
+        rev=(rev*10)+i;
+        num=num/10;
+        }
+        return rev;
+    }
+};
+int main()
+{
+    int x;
+    cout<<"Enter a number: ";
+    cin>>x;
+    reverseNumber N;
+    N.setnum(x);
+    cout<<"reversed number is : "<<N.getreversed()<<endl;
+return 0;
+}
