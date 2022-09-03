@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class factorial
+{
+private:
+    int num,fact;
+public:
+    void setnum(int n)
+    {
+        num=n;
+    }
+    int getfact(int num)
+    {
+        if(num==1)
+        return 1;
+        else
+        return (num*(getfact(num-1)));
+    }
+};
+int main()
+{
+    int a;
+    cout<<"Enter the number to find its factorial: "<<endl;
+    cin>>a;
+    factorial f;
+    f.setnum(a);
+    cout<<"factorial of "<<a<< " is = "<<f.getfact(a)<<endl;
+return 0;
+}
