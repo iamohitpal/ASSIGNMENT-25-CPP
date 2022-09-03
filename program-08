@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class Rectangle
+{
+private:
+    float length,width;
+public:
+    void setdata(float l,float w)
+    {
+        length=l;
+        width=w;
+    }
+    float getarea()
+    {
+        cout<<"Area of rectangle is : = "<<length*width<<endl;
+    }
+};
+int main()
+{
+    float x,y;
+    cout<<"Enter the length and width of the rectangle: "<<endl;
+    cin>>x>>y;
+    Rectangle R;
+    R.setdata(x,y);
+    R.getarea();
+return 0;
+}
