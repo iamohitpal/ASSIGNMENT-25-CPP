@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class circle
+{
+private:
+    float radius;
+public:
+    void setdata(float r)
+    {
+        radius=r;
+    }
+    float getarea()
+    {
+        cout<<"Area of circle is : = "<<3.14*radius*radius<<endl;
+    }
+};
+int main()
+{
+    float x;
+    cout<<"Enter the radius of the circle: "<<endl;
+    cin>>x;
+    circle R;
+    R.setdata(x);
+    R.getarea();
+return 0;
+}
+
