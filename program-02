@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+class time
+{
+private:
+    int hr,mints,sec;
+public:
+    void setdata(int,int,int);
+    void showdata();
+} c1;
+void time::setdata(int x,int y,int z)
+{
+    hr=x;
+    mints=y;
+    sec=z;
+}
+void time::showdata()
+{
+    cout<<"TIME IS :- "<<hr<<":"<<mints<<":"<<sec<<endl;
+}
+int main()
+{
+    int a,b,c;
+    cout<<"Enter the time :-"<<endl;
+    cout<<"Enter hours   : ";
+    cin>>a;
+    cout<<"Enter mints   : ";
+    cin>>b;
+    cout<<"Enter seconds : ";
+    cin>>c;
+    c1.setdata(a,b,c);
+    c1.showdata();
+return 0;
+}
