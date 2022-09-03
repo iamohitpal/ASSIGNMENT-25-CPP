@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class Area
+{
+private:
+   float length,width,radius,side;
+public:
+    void setdata(float l,float w,float r,float s)
+    {
+        length=l;
+        width=w;
+        radius=r;
+        side=s;
+    }
+    float getarea()
+    {
+        cout<<"area of rectangle is: "<<length*width<<endl;
+        cout<<"area of circle is: "<<(3.14*radius*radius)<<endl;
+        cout<<"area of square is : "<<(side*side)<<endl;
+    }
+};
+int main()
+{
+    float a,b,c,d;
+    cout<<"Enter the length of the rectangle : ";
+    cin>>a;
+    cout<<"Enter the width of the rectangle : ";
+    cin>>b;
+    cout<<"Enter the radius of the circle : ";
+    cin>>c;
+    cout<<"Enter the length of the the side of square : ";
+    cin>>d;
+    Area A,Q,R;
+    A.setdata(a,b,c,d);
+    A.getarea();
+}
