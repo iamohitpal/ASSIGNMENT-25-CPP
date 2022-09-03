@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+class largestNumber
+{
+private:
+    int num1,num2,num3;
+public:
+    void setdata(int a,int b,int c)
+    {
+        num1=a;
+        num2=b;
+        num3=c;
+    }
+    int getlargest()
+    {
+        if(num1>num2)
+        {
+            if(num2>num3)
+               {
+                   return num1;
+               }
+            else
+                {
+                    if(num1>num3)
+                        return num1;
+                    else
+                        return num3;
+                }
+        }
+        else
+        {
+            if(num2>num3)
+                return num2;
+            else
+                return num3;
+        }
+    }
+};
+int main()
+{
+    int x,y,z;
+    cout<<"Enter three numbers: "<<endl;
+    cin>>x>>y>>z;
+    largestNumber c;
+    c.setdata(x,y,z);
+    cout<<"largest number is: "<<c.getlargest()<<endl;
+}
