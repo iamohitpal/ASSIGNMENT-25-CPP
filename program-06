@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class square
+{
+private:
+    int n,s;
+    float n1,s1;
+    static int c;
+public:
+    void setdata();
+    void calculate();
+    void display();
+};
+int square::c=0;
+    void square::setdata()
+    {
+        cout<<"Enter an integer         : ";
+        cin>>n;
+        cout<<"Enter a float number     : ";
+        cin>>n1;
+        c++;
+    }
+    void square::calculate()
+    {
+        s=n*n;
+        s1=n1*n1;
+        c++;
+    }
+   void square::display()
+    {
+        cout<<"square of "<<n<<" is           : "<<s<<endl;
+        cout<<"square of "<<n1<<" is        : "<<s1<<endl;
+        cout<<"function is being called a: "<<c<<" times !"<<endl;
+    }
+int main()
+{
+    square S;
+    S.setdata();
+    S.calculate();
+    S.display();
+return 0;
+}
